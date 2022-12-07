@@ -21,9 +21,9 @@ namespace task02
                 Console.WriteLine("Числа равны");
             else
                 if (a > b)
-                Console.WriteLine("max = {0}", a);
+                Console.WriteLine("max = {0}, min = {1}", a, b);
             else
-                Console.WriteLine("max = {0}", b);
+                Console.WriteLine("max = {0}, min = {1}", b, a);
         }
     }
 }
