@@ -10,15 +10,10 @@ namespace Task10
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите трехзначное число: ");
+            Console.Write("Введите число: ");
             string str = Console.ReadLine();
 
-            if (str.Length < 3)
-            {
-                Console.WriteLine("Третьей цифры нет");
-                return;
-            }
-
+            //Проверяем, число ли введено
             int a;
             int.TryParse(str, out a);
             if (a == 0)
@@ -27,7 +22,13 @@ namespace Task10
                 return;
             }
 
-            Console.WriteLine("Вторая цифра трехначного числа: {0}", str[1]);
+            if (str.Length < 3)
+            {
+                Console.WriteLine("Третьей цифры нет");
+                return;
+            }
+
+            Console.WriteLine("Вторая цифра трехзначного числа: {0}", str[1]);
         }
     }
 }

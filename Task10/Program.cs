@@ -13,6 +13,7 @@ namespace Task10
             Console.Write("Введите трехзначное число: ");
             string str = Console.ReadLine();
 
+            //Проверяем, число ли введено
             int a;
             int.TryParse(str, out a);
             if (a == 0)
