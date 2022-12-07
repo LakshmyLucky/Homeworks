@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task10
+namespace Task13
 {
     class Program
     {
@@ -28,7 +28,7 @@ namespace Task10
                 return;
             }
 
-            Console.WriteLine("Вторая цифра трехзначного числа: {0}", str[1]);
+            Console.WriteLine("Третья цифра введенного числа: {0}", str[2]);
         }
     }
 }
