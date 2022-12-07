@@ -10,12 +10,12 @@ namespace task02
     {
         static void Main(string[] args)
         {
-            byte a, b;
+            int a, b;
 
             Console.Write("Введите число a: ");
-            byte.TryParse(Console.ReadLine(), out a);
+            int.TryParse(Console.ReadLine(), out a);
             Console.Write("Введите число b: ");
-            byte.TryParse(Console.ReadLine(), out b);
+            int.TryParse(Console.ReadLine(), out b);
 
             if (a == b)
                 Console.WriteLine("Числа равны");
