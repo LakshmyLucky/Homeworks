@@ -13,6 +13,12 @@ namespace Task10
             Console.Write("Введите трехзначное число: ");
             string str = Console.ReadLine();
 
+            if (str.Length < 3)
+            {
+                Console.WriteLine("Третьей цифры нет");
+                return;
+            }
+
             int a;
             int.TryParse(str, out a);
             if (a == 0)
@@ -21,13 +27,7 @@ namespace Task10
                 return;
             }
 
-            if (str.Length != 3)
-            {
-                Console.WriteLine("Это не трехзначное число");
-                return;
-            }
-
-            Console.WriteLine("Вторая цифра трехзначного числа: {0}", str[1]);
+            Console.WriteLine("Вторая цифра трехначного числа: {0}", str[1]);
         }
     }
 }
