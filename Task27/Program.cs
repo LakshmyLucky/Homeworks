@@ -8,6 +8,13 @@ namespace Task27
 {
     class Program
     {
+        static int Sum(string str_)
+        {
+            int sum = 0;
+            for (int i = 0; i < str_.Length; i++)
+                sum += int.Parse(str_[i].ToString());
+            return sum;
+        }
         static void Main(string[] args)
         {
             Console.Write("Введите число: ");
@@ -22,13 +29,7 @@ namespace Task27
                 return;
             }
 
-            int sum = 0;
-            for (int i = 0; i < str.Length; i++)
-            {
-                sum += int.Parse(str[i].ToString());
-            }
-
-            Console.WriteLine("Сумма цифр равна {0}", sum);
+            Console.WriteLine("Сумма цифр равна {0}", Sum(str));
         }
     }
 }
