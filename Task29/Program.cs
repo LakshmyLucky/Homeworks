@@ -8,25 +8,33 @@ namespace Task29
 {
     class Program
     {
-        static void Main(string[] args)
+        static void InputArray(byte[] arr)
         {
-            byte[] array = new byte[8];
-
             Console.WriteLine("Введите массив из 8 элементов:");
 
-            for (int i = 0; i < array.Length; i++)
-                byte.TryParse(Console.ReadLine(), out array[i]);
+            for (int i = 0; i < arr.Length; i++)
+                byte.TryParse(Console.ReadLine(), out arr[i]);
+        }
 
+        static void OutputArray(byte[] arr)
+        {
             Console.Write("[");
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.Write("{0}", array[i]);
+                Console.Write("{0}", arr[i]);
 
                 //Просто для красоты, чтобы лишнего пробела перед ] не было :)
-                if (i != array.Length - 1)
+                if (i != arr.Length - 1)
                     Console.Write(" ");
             }
             Console.WriteLine("]");
+        }
+
+        static void Main(string[] args)
+        {
+            byte[] array = new byte[8];
+            InputArray(array);
+            OutputArray(array);
         }
     }
 }
