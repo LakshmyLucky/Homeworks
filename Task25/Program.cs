@@ -22,6 +22,13 @@ namespace Task25
             return true;
         }
 
+        static int NumberPower(int a_, int b_)
+        {
+            int z = 1;
+            for (int i = 0; i < b_; i++) z *= a_;
+            return z;
+        }
+
         static void Main(string[] args)
         {
             int a, b;
@@ -39,10 +46,7 @@ namespace Task25
                 b = Convert.ToInt32(str);
             else return;
 
-            int z = 1;
-            for (int i = 0; i < b; i++) z *= a;
-
-            Console.WriteLine("Число {0}, возведенное в степень {1} = {2}", a, b, z);
+            Console.WriteLine("Число {0}, возведенное в степень {1} = {2}", a, b, NumberPower(a, b));
         }
     }
 }
