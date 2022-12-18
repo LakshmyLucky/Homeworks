@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task37
+namespace Task34
 {
- 
+
     class Program
     {
-
         static int[] InputArray(int[] arr)
         {
             //Честно - с рандомом в # ни разу не работала, не знаю как правильно
@@ -32,12 +27,12 @@ namespace Task37
             Console.WriteLine();
         }
 
-        static void OutputEvenArray(int[] arr)
+        static void OutputSumArray(int[] arr)
         {
-            byte sum = 0;
+            int sum = 0;
             for (int i = 0; i < arr.Length; i++)
-                if (arr[i] % 2 == 0) sum++;
-            Console.Write("Количество чётных чисел в массиве = ");
+                if (i % 2 != 0) sum += arr[i];
+            Console.Write("Сумма элементов, стоящих на нечётных позициях (нумерация с 0, 0 чётный) = ");
             Console.WriteLine(sum);
         }
         static void Main(string[] args)
@@ -49,7 +44,7 @@ namespace Task37
             //Вывод массива
             OutputArray(array);
             //Вывод результата
-            OutputEvenArray(array);
+            OutputSumArray(array);
         }
     }
 }
