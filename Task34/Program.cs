@@ -31,8 +31,8 @@ namespace Task34
         {
             int sum = 0;
             for (int i = 0; i < arr.Length; i++)
-                if (i % 2 != 0) sum += arr[i];
-            Console.Write("Сумма элементов, стоящих на нечётных позициях (нумерация с 0, 0 чётный) = ");
+                if (arr[i] % 2 == 0) sum ++;
+            Console.Write("Сколичество чётных чисел в массиве = ");
             Console.WriteLine(sum);
         }
         static void Main(string[] args)
