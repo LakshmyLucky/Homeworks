@@ -8,11 +8,11 @@ namespace Task64
 {
     class Program
     {
-        static void Rec(int n)
+        static int Rec(int n)
         {
             while (n > 0)
             {
-                Console.Write("{0} ", n);
+                Console.Write("{0} ", Rec(n));
                 n--;
             }
         }

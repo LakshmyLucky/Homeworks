@@ -23,6 +23,7 @@ namespace Task58
             {
                 for (int j = 0; j < n; j++)
                     Console.Write("{0,3} ", arr[i, j]);
+
                 Console.WriteLine();
             }
         }
