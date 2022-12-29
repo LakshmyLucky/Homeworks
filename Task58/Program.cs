@@ -56,7 +56,13 @@ namespace Task58
 
             //Фикция для пользователя, это мы уже ввели в переменную ab
             Console.Write("Введите количество строк массива B: ");
-            Console.ReadLine();
+            int f = int.Parse(Console.ReadLine());
+
+            if (f != ab)
+            {
+                Console.WriteLine("Число строк массива A не совпадает с числом столбцов массива B!");
+                return;
+            }
 
             Console.Write("Введите количество столбцов массива B: ");
             int cols_B = int.Parse(Console.ReadLine());
